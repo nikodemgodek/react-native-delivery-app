@@ -24,15 +24,15 @@ const HomeScreen = () => {
     }
 
     return(
-        <SafeAreaView style={homeStyle.flex}>
-            <View style={homeStyle.toolsContainer}>
-                <FontAwesome style={homeStyle.settingsButton} name="gear"/>
-            </View>
-            <View style={homeStyle.headerContainer}>
-                <Text style={homeStyle.headerUserWelcomeText}>Hi, {auth.currentUser.email}</Text>
-            </View>
-            <View style={homeStyle.signOutContainer}>
-                <Button onPress={handleSignOut} mode="contained">Sign out</Button>
+        <SafeAreaView style={{backgroundColor: '#023'}}>
+            <View>
+                <View style={homeStyle.toolsContainer}>
+                    <FontAwesome style={homeStyle.settingsButton} name="sign-out" onPress={handleSignOut}/>
+                    <FontAwesome style={homeStyle.settingsButton} name="gear"/>
+                </View>
+                <View style={homeStyle.headerContainer}>
+                    <Text style={homeStyle.headerUserWelcomeText}>Hi, {auth.currentUser.displayName ? auth.currentUser.displayName : 'Stranger'}</Text>
+                </View>
             </View>
         </SafeAreaView>
     )

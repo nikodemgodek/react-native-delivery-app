@@ -2,35 +2,37 @@ import { StyleSheet } from 'react-native';
 
 export const loginStyle = StyleSheet.create({
     flex: {
-        flex: 1,
         display: "flex",
-        justifyContent: "center",
         alignItems: "center",
         width: "100%",
-        paddingHorizontal: 30,
+        marginTop: 50,
     },
     textInput: {
         width: '100%',
         backgroundColor: "#fff",
         marginVertical: 10,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 7,
+        },
+        shadowOpacity: 0.23,
+        shadowRadius: 9.51,
+        elevation: 15,
     },
     buttonsContainer: {
         display: 'flex',
         flexDirection: 'row',
-        margin: 15,
+        margin: 10
     },
     button: {
-        marginHorizontal: 5,
-        backgroundColor: "#00aaff"
-    },
-    buttonRegister: {
-        marginHorizontal: 5,
-        backgroundColor: "#fff"
+        backgroundColor: "#000",
+        width: 100
     },
     logo: {
-        marginBottom: 30,
+        marginVertical: 100,
         fontSize: 80,
-        color: "#00aaff"
+        color: "#00aaff",
     }
 })
 
